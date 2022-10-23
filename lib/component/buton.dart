@@ -3,9 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Bouten extends StatefulWidget {
-  Bouten({
-    Key? key,required this.chose
-  }) : super(key: key);
+  Bouten({Key? key, required this.chose}) : super(key: key);
   IconData chose;
 
   @override
@@ -27,16 +25,19 @@ class _BoutenState extends State<Bouten> {
         });
       },
       style: ButtonStyle(
-          shape: MaterialStatePropertyAll(
-            RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(13),
-            ),
+        shape: MaterialStatePropertyAll(
+          RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(13),
           ),
-          side: MaterialStatePropertyAll(
-            BorderSide(color: Colors.black45),
-          ),
-          elevation: MaterialStatePropertyAll(0),
-          backgroundColor: MaterialStatePropertyAll(Colors.transparent)),
+        ),
+        side: MaterialStatePropertyAll(
+          BorderSide(color: Colors.black45),
+        ),
+        elevation: MaterialStatePropertyAll(0),
+        backgroundColor: MaterialStatePropertyAll(
+          Colors.transparent,
+        ),
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,

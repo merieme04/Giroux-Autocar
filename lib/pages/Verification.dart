@@ -8,74 +8,74 @@ class Verification extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: Stack(
-          children: [
-            Positioned(
-              top: 100,
-              left: 125,
+    return  Scaffold(
+      body: Stack(
+        children: [
+          Positioned(
+            top: 100,
+            left: 125,
+            child: Text(
+              "Verification",
+              style: GoogleFonts.inter(
+                  fontSize: 29, fontWeight: FontWeight.bold),
+            ),
+          ),
+          Positioned(
+            top: 160,
+            left: 50,
+            child: Text(
+              textAlign: TextAlign.center,
+              "Please input your verification number",
+              style: GoogleFonts.inter(
+                  color: Colors.black45,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w400),
+            ),
+          ),
+          Positioned(
+            top: 240,
+            width: 400,
+            left: 5,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Number(),
+                Number(),
+                Number(),
+                Number(),
+              ],
+            ),
+          ),
+          Positioned(
+            top: 370,
+            left: 120,
+            child: ElevatedButton(
               child: Text(
-                "Verification",
+                "Resend the code",
                 style: GoogleFonts.inter(
-                    fontSize: 29, fontWeight: FontWeight.bold),
+                  fontSize: 18,
+                  color: Color(0xffF7A538),
+                  decoration: TextDecoration.underline,
+                ),
               ),
-            ),
-            Positioned(
-              top: 160,
-              left: 50,
-              child: Text(
-                textAlign: TextAlign.center,
-                "Please input your verification number",
-                style: GoogleFonts.inter(
-                    color: Colors.black45,
-                    fontSize: 18,
-                    fontWeight: FontWeight.w400),
-              ),
-            ),
-            Positioned(
-              top: 240,
-              width: 400,
-              left: 5,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Number(),
-                  Number(),
-                  Number(),
-                  Number(),
-                ],
-              ),
-            ),
-            Positioned(
-              top: 370,left: 135,
-              child: Link(
-                target: LinkTarget.self,
-                uri: Uri.parse('http://criov.com/'),
-                builder: (BuildContext context,
-                        Future<void> Function()? followLink) =>
-                    MouseRegion(
-                  cursor: SystemMouseCursors.click,
-                  child: Text(
-                    "Resend the code",
-                    style: GoogleFonts.inter(
-                      fontSize: 18,
-                      color: Color(0xffF7A538),
-                      decoration: TextDecoration.underline,
-                    ),
-                  ),
+              onPressed: () {},
+              style: ButtonStyle(
+                elevation: MaterialStatePropertyAll(0),
+                backgroundColor: MaterialStatePropertyAll(
+                  Colors.transparent,
                 ),
               ),
             ),
-            Positioned(top: 340,left: 70,
-              child: Text(
-                "Didn’t recive a verification code?",
-                style: GoogleFonts.inter(color: Colors.black38, fontSize: 18),
-              ),
-            )
-          ],
-        ),
+          ),
+          Positioned(
+            top: 340,
+            left: 70,
+            child: Text(
+              "Didn’t recive a verification code?",
+              style: GoogleFonts.inter(color: Colors.black38, fontSize: 18),
+            ),
+          )
+        ],
       ),
     );
   }
