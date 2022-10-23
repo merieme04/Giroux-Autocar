@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:giroux_autocar/constricteuronboarding.dart';
+import 'package:giroux_autocar/component/constricteuronboarding.dart';
 import 'package:onboarding/onboarding.dart';
 
 class Onboarding1 extends StatelessWidget {
@@ -13,7 +13,7 @@ class Onboarding1 extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Stack(
-          children: [ 
+          children: [
             PageView(
               onPageChanged: (pos) {
                 position = pos;
@@ -22,7 +22,7 @@ class Onboarding1 extends StatelessWidget {
               children: [
                 NewOnboarding(
                   image: "assets/Onboarding1.png",
-                  p:1,
+                  p: 1,
                   ind: 0,
                 ),
                 NewOnboarding(
@@ -39,7 +39,6 @@ class Onboarding1 extends StatelessWidget {
                 ),
               ],
             ),
-
           ],
         ),
       ),

@@ -3,12 +3,10 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:linkable/linkable.dart';
 import 'package:url_launcher/link.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'form_login.dart';
-import 'from_signup.dart';
+import '../component/form_login.dart';
 
-
-class Signup extends StatelessWidget {
-  const Signup({Key? key}) : super(key: key);
+class Login extends StatelessWidget {
+  const Login({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,16 +16,16 @@ class Signup extends StatelessWidget {
         body: Stack(
           children: [
             Positioned(
-              top: 75,
+              top: 115,
               left: 150,
               child: Text(
-                "Sign Up",
+                "Login",
                 style: GoogleFonts.inter(
                     fontSize: 29, fontWeight: FontWeight.bold),
               ),
             ),
             Positioned(
-              top: 125,
+              top: 170,
               left: 20,
               child: Text(
                 textAlign: TextAlign.center,
@@ -39,17 +37,17 @@ class Signup extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: 180,
+              top: 235,
               left: 25,
               width: 360,
-              child: FormSignup(),
+              child: FormLogin(),
             ),
             Positioned(
-              top: 530,
-              left: 60,
+              top: 475,
+              left: 40,
               child: Row(children: [
                 Text(
-                  "Already have an account? ",
+                  "Don’t have an account? ",
                   style: GoogleFonts.inter(color: Colors.black38, fontSize: 18),
                 ),
                 Link(
@@ -60,11 +58,11 @@ class Signup extends StatelessWidget {
                       MouseRegion(
                     cursor: SystemMouseCursors.click,
                     child: Text(
-                      "Login",
+                      "Create account",
                       style: GoogleFonts.inter(
                         fontSize: 18,
                         color: Color(0xffF7A538),
-
+                        decoration: TextDecoration.underline,
                       ),
                     ),
                   ),
@@ -72,15 +70,14 @@ class Signup extends StatelessWidget {
               ]),
             ),
             Positioned(
-              top: 557,
-              left: 90,
+              top: 528,left: 90,
               child: Text(
-                "Sign In with social media",
+                "Login with social media",
                 style: GoogleFonts.inter(color: Colors.black38, fontSize: 18),
               ),
             ),
             Positioned(
-              top: 590,
+              top: 560,
               left: 230,
               child: OutlinedButton(
                 onPressed: () {},
@@ -102,7 +99,7 @@ class Signup extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: 590,
+              top: 560,
               left: 165,
               child: OutlinedButton(
                 onPressed: () {},
@@ -124,7 +121,7 @@ class Signup extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: 590,
+              top: 560,
               left: 100,
               child: OutlinedButton(
                 onPressed: () {},

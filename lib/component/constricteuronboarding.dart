@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:onboarding/onboarding.dart';
 
+import '../pages/Choose a vehicle.dart';
+
 class NewOnboarding extends StatelessWidget {
   NewOnboarding(
       {Key? key,
@@ -36,7 +38,13 @@ class NewOnboarding extends StatelessWidget {
                             Color(0xffF7A538),
                           ),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => const ChooseVehicle(),
+                            ),
+                          );
+                        },
                         child: Icon(Icons.arrow_forward_ios_rounded),
                       ),
                     ),
@@ -75,7 +83,7 @@ class NewOnboarding extends StatelessWidget {
                 pagesLength: 3,
                 indicator: Indicator(
                   activeIndicator:
-                  ActiveIndicator(color: Colors.grey, borderWidth: 1.5),
+                      ActiveIndicator(color: Colors.grey, borderWidth: 1.5),
                   closedIndicator: ClosedIndicator(
                     color: Color(0xffF7A538),
                   ),

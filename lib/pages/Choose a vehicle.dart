@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../component/buton.dart';
+
 class ChooseVehicle extends StatelessWidget {
   const ChooseVehicle({Key? key}) : super(key: key);
 
@@ -40,9 +42,52 @@ class ChooseVehicle extends StatelessWidget {
                 ),
               ),
             ),
+            Positioned(
+              top: 440,
+              left: 60,
+              child: SizedBox(
+                width: 130,
+                height: 130,
+                child: Bouten(chose: Icons.car_repair,),
+              ),
+            ),
+            Positioned(
+              top: 440,
+              left: 225,
+              child: SizedBox(
+                width: 130,
+                height: 130,
+                child: Bouten(chose: Icons.bike_scooter,),
+              ),
+            ),
+            Positioned(
+              top: 600,
+              left: 330,
+              child: SizedBox(
+                width: 60,
+                height: 50,
+                child: ElevatedButton(
+                  style: ButtonStyle(
+                    elevation: MaterialStatePropertyAll(6),
+                    backgroundColor: MaterialStatePropertyAll(
+                      Color(0xffF7A538),
+                    ),
+                  ),
+                  onPressed: () {
+                  },
+                  child: Icon(Icons.arrow_forward_ios_rounded),
+                ),
+              ),
+            ),
           ],
         ),
       ),
     );
   }
 }
+
+
+
+
+
+

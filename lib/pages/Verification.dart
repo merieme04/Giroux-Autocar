@@ -93,7 +93,7 @@ class Number extends StatelessWidget {
         child: TextFormField(
           cursorColor: Color(0xffF7A538),
           decoration: InputDecoration(
-            hintText: '0',
+            hintText: '*',
           ),
           textAlign: TextAlign.center,
           style: TextStyle(

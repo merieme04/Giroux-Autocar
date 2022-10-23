@@ -40,7 +40,6 @@ class _FormSignupState extends State<FormSignup> {
               bool emailValid = RegExp(
                       r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
                   .hasMatch(value!);
-              print(emailValid);
               if ((value == null || value.isEmpty)) {
                 return 'Email is wrong, please check again';
               } else if (!emailValid)

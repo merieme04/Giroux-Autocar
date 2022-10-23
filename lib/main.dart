@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-import 'package:giroux_autocar/Login.dart';
-import 'package:giroux_autocar/onboarding1.dart';
+import 'package:giroux_autocar/pages/Login.dart';
+import 'package:giroux_autocar/pages/onboarding1.dart';
 
-import 'Signup.dart';
-import 'Verification.dart';
+import 'pages/Signup.dart';
+import 'pages/Verification.dart';
 
 void main() {
-  runApp(const Verification());
+  runApp(const Onboarding1 ());
 }
 
 class MyApp extends StatelessWidget {
