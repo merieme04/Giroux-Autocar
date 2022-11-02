@@ -10,11 +10,10 @@ class NewOnboarding extends StatelessWidget {
       required this.image,
       this.t: 55,
       this.l: 0,
-      this.p: 0,
-      required this.ind})
+      this.p: 0,})
       : super(key: key);
   String image;
-  double l, t, ind;
+  double l, t;
   int p;
 
   @override
@@ -73,26 +72,7 @@ class NewOnboarding extends StatelessWidget {
                   fontSize: 18, fontWeight: FontWeight.w400),
             ),
           ),
-          Positioned(
-            top: 630,
-            left: 40,
-            child: CustomIndicator(
-              netDragPercent: ind,
-              pagesLength: 3,
-              indicator: Indicator(
-                activeIndicator:
-                ActiveIndicator(color: Colors.grey, borderWidth: 1.5),
-                closedIndicator: ClosedIndicator(
-                  color: Color(0xffF7A538),
-                ),
-                indicatorDesign: IndicatorDesign.polygon(
-                  polygonDesign: PolygonDesign(
-                    polygon: DesignType.polygon_circle,
-                  ),
-                ),
-              ),
-            ),
-          ),
+
         ],
       ),
     );
