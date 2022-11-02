@@ -3,12 +3,14 @@ import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/link.dart';
 
+import 'Login.dart';
+
 class Verification extends StatelessWidget {
   const Verification({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       body: Stack(
         children: [
           Positioned(
@@ -16,8 +18,8 @@ class Verification extends StatelessWidget {
             left: 125,
             child: Text(
               "Verification",
-              style: GoogleFonts.inter(
-                  fontSize: 29, fontWeight: FontWeight.bold),
+              style:
+                  GoogleFonts.inter(fontSize: 29, fontWeight: FontWeight.bold),
             ),
           ),
           Positioned(
@@ -74,7 +76,76 @@ class Verification extends StatelessWidget {
               "Didn’t recive a verification code?",
               style: GoogleFonts.inter(color: Colors.black38, fontSize: 18),
             ),
-          )
+          ),
+          Positioned(
+            top: 570,
+            left: 310,
+            child: SizedBox(
+              width: 60,
+              height: 50,
+              child: ElevatedButton(
+                style: ButtonStyle(
+                  elevation: MaterialStatePropertyAll(6),
+                  backgroundColor: MaterialStatePropertyAll(
+                    Color(0xffF7A538),
+                  ),
+                ),
+                onPressed: () {
+                  showDialog(
+                    context: context,
+                    builder: (_) => AlertDialog(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30),
+                      ),
+                      backgroundColor: Color(0xffF7A538),
+                      content: Container(
+                        child: Stack(
+                          children: [
+                            Image(
+                              image: AssetImage('assets/appbarimage.png'),
+                              fit: BoxFit.cover,
+                            ),
+                            Positioned(
+                              top: 20,
+                              left: 120,
+                              child: Icon(
+                                Icons.check_circle,
+                                size: 45,
+                                color: Colors.white,
+                              ),
+                            ),
+                            Positioned(
+                              left: 30,
+                              top: 75,
+                              child: Text(
+                                "Verification Success",
+                                style: GoogleFonts.inter(
+                                    color: Colors.white,
+                                    fontSize: 22,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                            Positioned(
+                              top: 115,
+                              child: Text(
+                                "Verification is succes and now you can use\n the app full ",
+                                style: GoogleFonts.inter(
+                                    color: Colors.white, fontSize: 14),
+                                textAlign: TextAlign.center,
+                              ),
+                            )
+                          ],
+                        ),
+                        width: 500.0,
+                        height: 200.0,
+                      ),
+                    ),
+                  );
+                },
+                child: Icon(Icons.arrow_forward_ios_rounded),
+              ),
+            ),
+          ),
         ],
       ),
     );
@@ -91,6 +162,9 @@ class Number extends StatelessWidget {
         width: 60,
         height: 60,
         child: TextFormField(
+          onEditingComplete: () {
+            print("toto");
+          },
           cursorColor: Color(0xffF7A538),
           decoration: InputDecoration(
             hintText: '*',

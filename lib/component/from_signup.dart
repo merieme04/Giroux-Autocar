@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:giroux_autocar/pages/Verification.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart' show timeDilation;
@@ -113,7 +114,11 @@ class _FormSignupState extends State<FormSignup> {
                   // Validate will return true if the form is valid, or false if
                   // the form is invalid.
                   if (_formKey.currentState!.validate()) {
-                    // Process data.
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => Verification(),
+                      ),
+                    );
                   }
                 },
                 child: Text(
