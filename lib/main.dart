@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:giroux_autocar/pages/Choose%20a%20vehicle.dart';
 
 import 'package:giroux_autocar/pages/Login.dart';
+import 'package:giroux_autocar/pages/floatMenu.dart';
 import 'package:giroux_autocar/pages/onboarding1.dart';
 
-import 'component/home.dart';
-import 'home1.dart';
+import 'home.dart';
 import 'pages/Signup.dart';
 import 'pages/Verification.dart';
 
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Onboarding1(),
+      home: FloatMenu(),
     );
   }
 }
