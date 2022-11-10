@@ -168,7 +168,7 @@ class Home extends StatelessWidget {
                 ],
               ),
               Flexible(
-                flex: 8,
+                flex: 7,
                 child: ListView(
                   scrollDirection: Axis.vertical,
                   children: [

@@ -1,3 +1,4 @@
+import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
 import '../home.dart';
@@ -37,32 +38,41 @@ class _FloatMenuState extends State<FloatMenu> {
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        elevation: 0,
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Services',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.message),
-            label: 'Consultation',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.person,
+      bottomNavigationBar: Padding(
+        padding: EdgeInsets.only(bottom: 15.0, left: 23, right: 23),
+        child: FloatingNavbar(
+          iconSize:27
+          ,fontSize: 13,
+          borderRadius: 10,
+          width: 350,
+          elevation: 28,
+          itemBorderRadius: 10,
+          selectedBackgroundColor: Color(0xffF7A538),
+          backgroundColor: Color(0xffEFF2F9),
+          items: [
+            FloatingNavbarItem(
+
+              icon: Icons.home,
+              title: 'Home',
             ),
-            label: 'Profile',
-          ),
-        ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: Color(0xffF7A538),
-        unselectedItemColor: Colors.black54,
-        onTap: _onItemTapped,
+            FloatingNavbarItem(
+              icon: Icons.settings,
+              title: 'Services',
+            ),
+            FloatingNavbarItem(
+              icon: Icons.message,
+              title: 'Consultation',
+            ),
+            FloatingNavbarItem(
+              icon: Icons.person,
+              title: 'Profile',
+            ),
+          ],
+          currentIndex: _selectedIndex,
+          selectedItemColor: Color(0xffffffff),
+          unselectedItemColor: Colors.black54,
+          onTap: _onItemTapped,
+        ),
       ),
     );
   }
